@@ -479,15 +479,20 @@ void System::SavePointsOfMap(const string &filename)
     // mpMap è la mappa, già dichiarato nelle prime righe da chi ha fatto il file
     // GetAllMapPoints() è una funzione che restituisce tutti i punti della mappa
     vector<MapPoint*> pointsOfMap = mpMap->GetAllMapPoints();
+
+
+    // Siccome se inserisco "grezzamente" i punti nel file poi il pcl_viewer non riesce a leggerlo, devo andare a inserire delle stringhe iniziali di supporto
+    std::string strPerPcl = std::string("# .PCD v.7 - Point Cloud Data file format\nVERSION .7\n");
+    strPerPcl += "FIELDS x y z\nSIZE 4 4 4\nTYPE F F F\nCOUNT 1 1 1\nWIDTH " + std::to_string(pointsOfMap.size()) + "\nHEIGHT 1\nVIEWPOINT 0 0 0 1 0 0 0\nPOINTS " + std::to_string(pointsOfMap.size()) + "\nDATA ascii\n";
+
     // Ora apro un output file stream, come fa la funzione qui sopra
     ofstream f;
     f.open(filename.c_str());
-    f << fixed;
+    f << strPerPcl;   // scrivo nel file la stringa di supporto
 
     // in pratica ora abbiamo un array di "mapPoint", e per ognuno devo usare il metodo GetWorldPos per ottenerne la corrispondente posizione
     for (auto& elem: pointsOfMap){
         auto i = &elem - &pointsOfMap[0];
-    //for(size_t i=0; i<pointsOfMap.size(); i++) {
         MapPoint* thisMapPoint = pointsOfMap[i];
 
         //questo lo scrivono anche in altre funzioni qui sopra
