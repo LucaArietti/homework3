@@ -1,0 +1,1 @@
+/usr/bin/c++   -std=c++0x -Wall -Wextra  -O3 -DNDEBUG   CMakeFiles/SimpleMultiDisplay.dir/main.cpp.o  -o SimpleMultiDisplay -rdynamic ../../src/libpangolin.so -lGLU -lGL -lGLEW -lwayland-egl -lwayland-client -lwayland-cursor -lxkbcommon -lEGL -lSM -lICE -lX11 -lXext -lrt -lpthread -lOpenNI -lpng -lz -ljpeg -ltiff -Wl,-rpath,/home/luca/git/Pangolin/build/src 
