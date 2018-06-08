@@ -34,5 +34,15 @@ Recarsi poi nella cartella _Cluster Extraction_ e digitare:
 10. Per visualizzare i punti clustati della point cloud con la libreria PCL, lanciare il comando ` pcl_viewer cloud_cluster_*` (dove l'asterisco serve per mandare al viewer tutti i file creati dal cluster_extraction)
 
 ## Svolgimento dell'homework
+Ho modificato il file `/ORB_SLAM2/src/System.cc` aggiungendo a riga 475 una funzione che salva in un file i punti ottenuti da `GetAllMapPoints()`. Ho aggiunto dei commenti a quella porzione di codice fatta da me.
+Per fare questo ho consultato [questa pagina](https://github.com/raulmur/ORB_SLAM2/issues/468 "GitHub.com").
 
+Poi ho aggiunto al file `/ORB_SLAM2/include/System.h` nelle righe 119 e 120 la dichiarazione della funzione costruita in `System.cc`.
 
+Ho modificato `/ORB_SLAM2/Examples/ROS/ORB_SLAM2/src/ros_stereo.cc` righe 128 e 129 per invocare la funzione da me creata passandogli come stringa "pointcloud.pcd", così da crearmi l'omonimo file.
+
+Ho creato la cartella _Cluster Extraction_ e all'interno ho scritto il file `cluster_extraction.cpp` come suggerito dalla [documentazione](http://www.pointclouds.org/documentation/tutorials/cluster_extraction.php#the-code "PointClouds.org"). Ho modificato leggermente questo file nelle righe 77~81 per permettere di passare come secondo parametro il valore di soglia.
+
+Ho creato il file `CMakeLists.txt` come suggerito dalla [documentazione](http://www.pointclouds.org/documentation/tutorials/cluster_extraction.php#compiling-and-running-the-program "PointClouds.org") e l'ho eseguito con `cmake` e quindi poi compilato con `make`.
+
+## Screenshot
