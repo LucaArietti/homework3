@@ -46,3 +46,12 @@ Ho creato la cartella _Cluster Extraction_ e all'interno ho scritto il file `clu
 Ho creato il file `CMakeLists.txt` come suggerito dalla [documentazione](http://www.pointclouds.org/documentation/tutorials/cluster_extraction.php#compiling-and-running-the-program "PointClouds.org") e l'ho eseguito con `cmake` e quindi poi compilato con `make`.
 
 ## Screenshot
+<p align="center">
+  <img width="70%" height="40%" src="screenshot/esecBag.png">
+  <div align="center">Esecuzione della Bag</div>
+</p>
+
+<p align="center">
+  <img width="70%" height="40%" src="screenshot/non_cluster_crop.gif">
+  <div align="center">2. Autonomous navigation in our map created in the previous point</div>
+</p>
