@@ -51,30 +51,36 @@ Ho creato il file `CMakeLists.txt` come suggerito dalla [documentazione](http://
   <div align="center">Esecuzione della Bag</div>
 </p>
 
+
 <p align="center">
   <img width="70%" height="40%" src="screenshot/non_clusterizzata.png">
   <div align="center">Point Cloud non clusterizzata</div>
 </p>
+
 
 <p align="center">
   <img width="70%" height="40%" src="screenshot/non_cluster_crop.gif">
   <div align="center">Point Cloud non clusterizzata</div>
 </p>
 
+
 <p align="center">
   <img width="70%" height="40%" src="screenshot/0.25.png">
   <div align="center">Point Cloud clusterizzata con valore di soglia di 0.25</div>
 </p>
+
 
 <p align="center">
   <img width="70%" height="40%" src="screenshot/0.35.png">
   <div align="center">Point Cloud clusterizzata con valore di soglia di 0.35</div>
 </p>
 
+
 <p align="center">
   <img width="70%" height="40%" src="screenshot/0.50.png">
   <div align="center">Point Cloud clusterizzata con valore di soglia di 0.50</div>
 </p>
+
 
 <p align="center">
   <img width="70%" height="40%" src="screenshot/clusterizzata_crop.gif">
